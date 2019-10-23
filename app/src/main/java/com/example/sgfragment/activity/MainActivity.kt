@@ -39,8 +39,10 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            false
+            true
         }
+
+        loadFragment(HomeFragment())
     }
 
     fun loadFragment(fragment: Fragment) {
