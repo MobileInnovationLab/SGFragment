@@ -4,9 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.sgfragment.R
-import com.example.sgfragment.fragment.FavoriteFragment
-import com.example.sgfragment.fragment.HomeFragment
-import com.example.sgfragment.fragment.ProfileFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,28 +18,21 @@ class MainActivity : AppCompatActivity() {
         }
 
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
-            val currFragment = supportFragmentManager.findFragmentById(R.id.container)
             when (menuItem.itemId) {
                 R.id.menu_home -> {
-                    if (currFragment !is HomeFragment) {
-                        loadFragment(HomeFragment())
-                    }
+                    // TODO: Load Home Fragment. Call loadFragment function with parameter HomeFragment()
                 }
                 R.id.menu_favorite -> {
-                    if (currFragment !is FavoriteFragment) {
-                        loadFragment(FavoriteFragment())
-                    }
+                    // TODO: Load Favorite Fragment. Call loadFragment function with parameter FavoriteFragment()
                 }
                 R.id.menu_profile -> {
-                    if (currFragment !is ProfileFragment) {
-                        loadFragment(ProfileFragment())
-                    }
+                    // TODO: Load Profile Fragment. Call loadFragment function with parameter ProfileFragment()
                 }
             }
             true
         }
 
-        loadFragment(HomeFragment())
+        // TODO: Load Home Fragment when MainActivity created. Call loadFragment function with parameter HomeFragment()
     }
 
     fun loadFragment(fragment: Fragment) {

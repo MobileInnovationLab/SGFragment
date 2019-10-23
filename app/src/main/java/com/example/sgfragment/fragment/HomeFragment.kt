@@ -28,17 +28,18 @@ class HomeFragment : Fragment() {
         val tab_layout: TabLayout = v.find(R.id.tab_layout)
         val view_pager: ViewPager = v.find(R.id.view_pager)
 
-        setupViewPager(view_pager)
-        tab_layout.setupWithViewPager(view_pager)
+        // TODO: Setup all child fragment into view_pager. Call setupViewPager with parameter view_pager.
+
+        // TODO: Set the view_pager into tab_layout using tab_layout.setupWithViewPager(view_pager)
 
         return v
     }
 
     private fun setupViewPager(view_pager: ViewPager) {
         val viewPagerAdapter = ViewPagerAdapter(childFragmentManager)
-        viewPagerAdapter.addFragment(HomeOneFragment(), "ONE")
-        viewPagerAdapter.addFragment(HomeTwoFragment(), "TWO")
-        viewPagerAdapter.addFragment(HomeThreeFragment(), "THREE")
+        // TODO: Add all child fragment into viewPagerAdapter
+        // TODO: Call addFragment function from viewPagerAdapter with parameter fragment and title
+        // TODO: viewPagerAdapter.addFragment(HomeOneFragment(), "ONE")
         view_pager.adapter = viewPagerAdapter
     }
 }

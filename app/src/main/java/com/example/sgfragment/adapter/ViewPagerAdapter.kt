@@ -8,14 +8,21 @@ class ViewPagerAdapter(manager: FragmentManager) : FragmentPagerAdapter(manager,
     private var fragmentList: MutableList<Fragment> = mutableListOf()
     private var fragmentTitleList: MutableList<String> = mutableListOf()
 
-    override fun getItem(position: Int) = fragmentList[position]
+    override fun getItem(position: Int): Fragment {
+        TODO("return fragmentList[position]")
+    }
 
-    override fun getCount() = fragmentList.size
+    override fun getCount(): Int {
+        TODO("return fragmentList.size")
+    }
 
-    override fun getPageTitle(position: Int) = fragmentTitleList[position]
+    override fun getPageTitle(position: Int): String {
+        TODO("return fragmentTitleList[position]")
+    }
 
     fun addFragment(fragment: Fragment, title: String) {
-        fragmentList.add(fragment)
-        fragmentTitleList.add(title)
+        // TODO: Add fragment parameter to fragmentList using fragmentList.add(fragment)
+
+        // TODO: Add title parameter to fragmentTitleList using fragmentTitleList.add(title)
     }
 }
